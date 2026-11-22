@@ -1,0 +1,65 @@
+# OS & Editors
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.classpath
+.project
+.settings/
+
+# Environment variables & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Java / Spring Boot / Maven / Gradle
+backend/target/
+backend/build/
+backend/.gradle/
+backend/out/
+*.class
+*.jar
+*.war
+*.ear
+
+# Node / React / TypeScript / Vite
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/coverage/
+
+# Python / AI Service
+ai-service/__pycache__/
+ai-service/**/__pycache__/
+ai-service/*.py[cod]
+ai-service/.venv/
+ai-service/venv/
+ai-service/env/
+ai-service/.pytest_cache/
+ai-service/models/*.joblib
+ai-service/models/*.pkl
+*.egg-info/
+
+# Docker local volumes
+postgres_data/
