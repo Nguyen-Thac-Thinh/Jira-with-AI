@@ -1,5 +1,7 @@
 # Jira with AI (AgileFlow AI)
 
+[![CI](https://github.com/Nguyen-Thac-Thinh/Jira-with-AI/actions/workflows/ci.yml/badge.svg)](https://github.com/Nguyen-Thac-Thinh/Jira-with-AI/actions/workflows/ci.yml)
+
 Ứng dụng web quản lý dự án Agile/Scrum lấy cảm hứng từ Jira, tích hợp **AI gợi ý Story Point** dựa trên **nội dung task**, **độ khó**, **thời gian dự kiến** và **lịch sử các task đã hoàn thành** bằng **Machine Learning (`scikit-learn`) + Mô phỏng Monte Carlo**.
 
 ## Tech Stack
