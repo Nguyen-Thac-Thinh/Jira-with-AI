@@ -48,6 +48,7 @@ frontend/dist/
 frontend/build/
 frontend/.vite/
 frontend/coverage/
+*.tsbuildinfo
 
 # Python / AI Service
 ai-service/__pycache__/
