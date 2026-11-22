@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Validate after interaction (:user-invalid / :user-valid) */
+.auth-input:user-invalid {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.auth-input:user-valid {
+  border-color: #16a34a;
+}
+
+.auth-field-error {
+  display: none;
+}
+
+.auth-field:has(.auth-input:user-invalid) .auth-field-error {
+  display: flex;
+}
