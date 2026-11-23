@@ -17,3 +17,98 @@
 .auth-field:has(.auth-input:user-invalid) .auth-field-error {
   display: flex;
 }
+
+/* Native modal dialog scroll containment */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: rgb(15 23 42 / 0.5);
+  backdrop-filter: blur(2px);
+}
+
+/* Responsive data table with container queries */
+.table-wrapper {
+  overflow: auto;
+  max-inline-size: 100%;
+  max-block-size: min(520px, 78vh);
+  container-type: inline-size;
+}
+
+.responsive-roster-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  --label-2: "Email";
+  --label-3: "Role";
+  --label-4: "Joined";
+  --label-5: "Actions";
+}
+
+.responsive-roster-table thead {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 1;
+}
+
+.responsive-roster-table tbody th {
+  position: sticky;
+  inset-inline-start: 0;
+  background: #ffffff;
+}
+
+@container (width < 600px) {
+  .responsive-roster-table,
+  .responsive-roster-table thead,
+  .responsive-roster-table tbody,
+  .responsive-roster-table tr,
+  .responsive-roster-table th,
+  .responsive-roster-table td {
+    display: block;
+  }
+
+  .responsive-roster-table thead {
+    display: none;
+  }
+
+  .responsive-roster-table tr {
+    margin-block-end: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  .responsive-roster-table tbody th {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 2;
+    background: #f8fafc;
+  }
+
+  .responsive-roster-table td:nth-child(2)::before {
+    content: var(--label-2) ": ";
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .responsive-roster-table td:nth-child(3)::before {
+    content: var(--label-3) ": ";
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .responsive-roster-table td:nth-child(4)::before {
+    content: var(--label-4) ": ";
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .responsive-roster-table td:nth-child(5)::before {
+    content: var(--label-5) ": ";
+    font-weight: 600;
+    color: #475569;
+  }
+}

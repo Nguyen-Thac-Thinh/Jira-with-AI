@@ -2,6 +2,8 @@ package com.agileflow.controller;
 
 import com.agileflow.dto.auth.LoginRequest;
 import com.agileflow.dto.auth.RegisterRequest;
+import com.agileflow.repository.ProjectMemberRepository;
+import com.agileflow.repository.ProjectRepository;
 import com.agileflow.repository.UserRepository;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -34,8 +36,16 @@ class AuthControllerIntegrationTest {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private ProjectRepository projectRepository;
+
+    @Autowired
+    private ProjectMemberRepository projectMemberRepository;
+
     @BeforeEach
     void setUp() {
+        projectMemberRepository.deleteAll();
+        projectRepository.deleteAll();
         userRepository.deleteAll();
     }
 
